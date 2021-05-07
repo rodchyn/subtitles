@@ -61,6 +61,13 @@ class TtmlConverter implements ConverterContract
 
     protected static function ttmlTimeToInternal($ttml_time)
     {
-        return rtrim($ttml_time, 's');
+        $parts = explode('.', $ttml_time);
+
+        $only_seconds = strtotime("1970-01-01 {$parts[0]} UTC");
+        $milliseconds = (float)('0.' . $parts[1]);
+
+        $time = $only_seconds + $milliseconds;
+
+        return $time;
     }
 }
