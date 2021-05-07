@@ -1,5 +1,5 @@
 {
-    "name": "mantas-done/subtitles",
+    "name": "rodchyn/subtitles",
     "description": "Subtitle converter and generator for PHP",
     "type": "library",
     "minimum-stability": "dev",
@@ -14,6 +14,6 @@
       ]
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.0"
+        "phpunit/phpunit": "^8.0"
     }
 }
